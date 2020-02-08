@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateReminder"
+    android:layout_centerHorizontal="true">
+    <RelativeLayout
+        android:id="@+id/reminderLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+        <TextView
+            android:id="@+id/placeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_centerHorizontal="true"
+            android:text="Reminder"
+            android:textSize="25sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/overlayTitle"
+            android:layout_below="@id/placeTitle">
+            <EditText
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:ems="10"
+                android:textStyle="italic"
+                android:hint="Reminder here ..."
+                android:inputType="textPersonName" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/aboutLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/reminderLayout"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true">
+        <TextView
+            android:id="@+id/placeDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:textSize="25sp"
+            android:text="About"
+            android:layout_centerHorizontal="true"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/overlayDescription"
+            android:layout_centerInParent="true"
+            android:layout_below="@id/placeDescription">
+            <EditText
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:ems="10"
+                android:hint="About here ..."
+                android:inputType="textMultiLine"
+                android:textStyle="italic"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button
+            android:id="@+id/settime"
+            android:layout_below="@+id/overlayDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set Time And Save"
+            android:layout_marginTop="25dp"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</RelativeLayout>
